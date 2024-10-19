@@ -8,7 +8,8 @@ import { v1Router } from './apis/v1';
 import { type Config, config } from './config';
 import { database } from './database';
 import { type Database } from './database/Database';
-import { WebServer } from './http/WebServer';
+import { ExpressWebServer } from './http/ExpressWebServer';
+import { type WebServer } from './http/WebServer';
 import { logger } from './logging';
 
 export class CompositionRoot {
@@ -26,7 +27,7 @@ export class CompositionRoot {
 
   private constructor() {
     this.database = database;
-    this.webServer = new WebServer({
+    this.webServer = new ExpressWebServer({
       port: 8080,
       prefix: '/api/v1',
       router: v1Router,
