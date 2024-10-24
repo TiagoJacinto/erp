@@ -1,15 +1,30 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # compiled output
 dist
+build
 tmp
 /out-tsc
 
 # dependencies
 node_modules
 
+# dotenv environment variable files
+*.env
+*.env.*
+!*.env.example*
+
+# dependencies
+/.pnp
+.pnp.*
+
+# nx
+.nx/cache
+.nx/workspace-data
+**/vite.config.{js,ts,mjs,mts,cjs,cts}.timestamp*
+
 # IDEs and editors
-/.idea
+.idea
 .project
 .classpath
 .c9/
@@ -19,24 +34,115 @@ node_modules
 
 # IDE - VSCode
 .vscode/*
+.vscode-test
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# Turborepo
+.turbo
+
+# Docker
+*.tar
+
+# testing
+coverage
+
 # misc
 /.sass-cache
 /connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
 /typings
+*.pem
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # System Files
 .DS_Store
 Thumbs.db
 
-.nx/cache
-.nx/workspace-data
+# vercel
+.vercel
+
+dist-ssr
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log_
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+/libpeerconnection.log
+testem.log
+
+# database
+prisma/db.sqlite
+prisma/db.sqlite-journal
+
+# Caches
+
+.cache
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+
+report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
+
+# Runtime data
+
+pids
+_.pid
+_.seed
+*.pid.lock
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+
+build/Release
+
+# TypeScript cache
+
+*.tsbuildinfo
+
+# Optional npm cache directory
+
+.npm
+
+# Microbundle cache
+
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+
+.node_repl_history
+
+# Output of 'npm pack'
+
+*.tgz
+
+# Next.js Typescript
+
+next-env.d.ts
+
+# Next.js build output
+
+.next
+out
+
+# vercel
+.vercel
+
+# yarn v2
+
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn-integrity
