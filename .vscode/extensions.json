@@ -1,7 +1,11 @@
 {
   "recommendations": [
+    "trunk.io",
+    "mkhl.direnv",
+    "jnoortheen.nix-ide",
     "nrwl.angular-console",
     "esbenp.prettier-vscode",
-    "firsttris.vscode-jest-runner"
+    "firsttris.vscode-jest-runner",
+    "ms-playwright.playwright"
   ]
 }
